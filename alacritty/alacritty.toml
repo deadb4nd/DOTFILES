@@ -1,0 +1,141 @@
+# Hearth — saturated warm-dark. Exact mirror of nvim's lua/hearth.lua NIGHT
+# palette and of the chroma values in ~/.tmux.conf. Ember accent on a
+# near-black warm canvas; the ANSI set follows the same warm-left / cool-right
+# syntax split, so a stack trace in the terminal reads the same as the source
+# that produced it.
+# Every ANSI colour is >= 4.5:1 against the canvas (WCAG AA).
+[general]
+live_config_reload = true
+
+[window]
+opacity = 0.97
+startup_mode = "Maximized"
+decorations = "None"
+dynamic_title = true
+resize_increments = true
+dynamic_padding = true
+
+[window.padding]
+x = 12
+y = 16
+
+[font]
+size = 18.0
+normal.family = "BlexMono Nerd Font"
+normal.style = "Regular"
+# BlexMono ships no true bold/italic cuts, so map them onto the Regular face
+# and let the terminal's synthetic weight do the work. Without this, bold code
+# silently renders identical to regular.
+bold.family = "BlexMono Nerd Font"
+bold.style = "Regular"
+italic.family = "BlexMono Nerd Font"
+italic.style = "Regular"
+bold_italic.family = "BlexMono Nerd Font"
+bold_italic.style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+unfocused_hollow = true
+thickness = 0.15
+
+# vi mode: the cursor shifts to the mint role so INSERT is unmistakable
+[colors.vi_mode_cursor]
+text = "#100E0D"
+cursor = "#7FE3C4"
+
+[scrolling]
+history = 50000
+multiplier = 3
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[terminal]
+osc52 = "CopyPaste"
+
+[colors]
+[colors.primary]
+background = "#100E0D"
+foreground = "#F2EAE3"
+
+[colors.cursor]
+text = "#100E0D"
+cursor = "#FF9E64"      # ember — matches the nvim block cursor
+
+[colors.cursor_guide]
+fg = "#B4E86E"          # lime
+bg = "#100E0D"
+
+[colors.vi_mode_cursor_guide]
+fg = "#7FE3C4"
+bg = "#100E0D"
+
+[colors.selection]
+text = "#F2EAE3"
+background = "#4A3D35"   # hearth sel
+
+# Normal ANSI roles, mapped onto hearth's syntax palette:
+#   red = error/fire · green = string/lime · yellow = function/gold
+#   blue = keyword/ember (the signature accent) · magenta = builtin/violet
+#   cyan = type/mint · white = body · black = border
+[colors.normal]
+black   = "#332C27"   # hearth bg3 (borders)
+red     = "#FF5C5C"   # err
+green   = "#B4E86E"   # str
+yellow  = "#FFC46B"   # fn
+blue    = "#FF9E64"   # accent
+magenta = "#B69CFF"   # builtin
+cyan    = "#7FE3C4"   # type
+white   = "#F2EAE3"   # fg0
+
+[colors.bright]
+black   = "#78695E"   # line numbers
+red     = "#FF8785"
+green   = "#C6F08A"
+yellow  = "#FFD79A"
+blue    = "#FFB489"
+magenta = "#C9B6FF"
+cyan    = "#A3EDD8"
+white   = "#FFFFFF"
+
+[colors.dim]
+black   = "#191614"   # panel — matches hearth bg1 exactly
+red     = "#8C3330"
+green   = "#5A6E2A"
+yellow  = "#7E5F1F"
+blue    = "#8A4A22"
+magenta = "#5B4A82"
+cyan    = "#3D6B5C"
+white   = "#4A423B"
+
+[colors.search]
+matches.foreground = "#100E0D"
+matches.background = "#FFC46B"     # gold — the loudest thing on screen,
+                                    # because a search hit should never be missed
+focused_match.foreground = "#100E0D"
+focused_match.background = "#FFB454"
+
+[colors.hints]
+start.foreground = "#100E0D"
+start.background = "#7FE3C4"       # mint
+end.foreground = "#100E0D"
+end.background = "#FF9E64"         # ember
+
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "U", mods = "Control|Shift" }

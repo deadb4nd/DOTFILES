@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Masaż z dojazdem – [Imię Nazwisko]</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ee;--ink:#1c1b19;--mute:#6f6a62;--line:#d9d3c8;--img:#dcd5c8;--acc:#8c6b4a;--ph:#ffe58a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171614;--ink:#f1ede6;--mute:#a49e94;--line:#34312d;--img:#2a2723;--acc:#c9a37c}}
+:root[data-theme="dark"]{--bg:#171614;--ink:#f1ede6;--mute:#a49e94;--line:#34312d;--img:#2a2723;--acc:#c9a37c}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 'Hanken Grotesk',system-ui,sans-serif}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:300;line-height:1.08;margin:0}
+h1{font-size:clamp(2.6rem,6.5vw,5rem);letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.5vw,3rem);letter-spacing:-.015em;margin-bottom:.5em}
+h3{font-size:1.6rem}
+em{font-style:italic;color:var(--acc)}
+p{margin:0 0 1em}a{color:inherit}
+.w{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.k{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:20px}
+.mu{color:var(--mute)}
+.ph{background:var(--ph);color:#1c1b19;padding:0 4px;border-radius:3px;font-style:normal}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;padding:15px 30px;font:inherit;font-weight:600;border:0;cursor:pointer}
+.btn.o{background:none;color:var(--ink);border:1px solid var(--ink)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:Newsreader,serif;font-size:1.3rem;text-decoration:none}
+header nav{display:flex;gap:28px;align-items:center;font-size:.95rem}
+header nav a{text-decoration:none}
+@media(max-width:760px){header nav a.h{display:none}}
+/* photo slots */
+.img{position:relative;background:var(--img) center/cover no-repeat;cursor:pointer;display:flex;align-items:flex-end;overflow:hidden}
+.img span{margin:12px;font-size:.78rem;line-height:1.4;max-width:80%;background:var(--bg);padding:6px 10px;color:var(--mute)}
+.img.has span{display:none}
+.r45{aspect-ratio:4/5}.r43{aspect-ratio:4/3}.r11{aspect-ratio:1}.r219{aspect-ratio:21/9}
+@media(max-width:700px){.r219{aspect-ratio:4/3}}
+.draft{background:var(--ink);color:var(--bg);text-align:center;font-size:.85rem;padding:8px 12px}
+/* hero */
+.hero{padding:56px 0 80px}
+.hg{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:860px){.hg{grid-template-columns:1fr;gap:36px}}
+.hero p.l{font-size:1.15rem;color:var(--mute);max-width:440px;margin:24px 0 32px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px;padding-top:28px;border-top:1px solid var(--line)}
+.facts b{display:block;font-family:Newsreader,serif;font-weight:400;font-size:1.25rem;margin-bottom:4px}
+.facts span{font-size:.92rem;color:var(--mute);line-height:1.45;display:block}
+@media(max-width:700px){.facts{grid-template-columns:1fr;gap:18px}}
+/* treatments */
+.tr{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;margin-top:40px}
+.tr h3{margin:18px 0 8px}
+.tr .for{font-size:.88rem;color:var(--acc);font-weight:600;margin-top:8px}
+/* price */
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:860px){.pg{grid-template-columns:1fr;gap:36px}}
+.seg{display:inline-flex;border:1px solid var(--ink);margin:6px 0 28px}
+.seg button{font:inherit;font-weight:600;border:0;background:none;color:inherit;padding:11px 26px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.pp{font-family:Newsreader,serif;font-size:3.4rem;line-height:1;margin-bottom:12px;font-weight:300}
+.clock{position:relative;max-width:300px;margin:0 auto;width:100%}
+.clock svg{width:100%;display:block}
+.clock .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.clock .c b{font-family:Newsreader,serif;font-weight:300;font-size:4.2rem;line-height:1}
+#arc{transition:stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1)}
+/* steps */
+.sp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;margin-top:36px}
+.sp div{border-top:1px solid var(--ink);padding-top:18px}
+.sp b{font-family:Newsreader,serif;font-weight:300;font-size:1.5rem;display:block;margin-bottom:6px}
+/* about */
+.ab{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+@media(max-width:860px){.ab{grid-template-columns:1fr;gap:36px}}
+.cert{display:flex;gap:18px;border-top:1px solid var(--line);padding:14px 0}
+.cert .y{min-width:70px;color:var(--acc);font-weight:600}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal .img:last-child{display:none}}
+.q{font-family:Newsreader,serif;font-weight:300;font-style:italic;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.25;max-width:860px}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-family:Newsreader,serif;font-size:1.3rem}
+details p{margin:10px 0 0;color:var(--mute)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+@media(max-width:860px){.two{grid-template-columns:1fr;gap:32px}}
+.cta{background:var(--ink);color:var(--bg)}
+.cta h2{font-size:clamp(2.4rem,6vw,4.4rem)}
+.cta em{color:#d9b890}
+.cta .btn{background:var(--bg);color:var(--ink)}.cta .btn.o{background:none;color:var(--bg);border-color:var(--bg)}
+footer{padding:26px 0 90px;font-size:.85rem;color:var(--mute);text-align:center}
+.bar{display:none}
+@media(max-width:720px){.bar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);z-index:9}.bar .btn{flex:1;text-align:center;padding:13px}section{padding:64px 0}}
+</style>
+</head>
+<body>
+<div class="draft">Wersja robocza: kliknij szarą ramkę, aby wstawić zdjęcie (podgląd). Żółte pola to tekst do uzupełnienia.</div>
+<header><div class="w"><a class="logo" href="#"><span class="ph">[Imię Nazwisko]</span></a><nav><a class="h" href="#rodzaje">Rodzaje masażu</a><a class="h" href="#cennik">Cennik</a><a class="h" href="#o-mnie">O mnie</a><a href="#kontakt"><b>Umów wizytę</b></a></nav></div></header>
+
+<main>
+<section class="hero"><div class="w">
+<div class="hg">
+<div>
+<div class="k">Masaż z dojazdem · <span class="ph">[miasto]</span></div>
+<h1>Masaż w Twoim domu, <em>kiedy</em> Ci pasuje.</h1>
+<p class="l">Przyjeżdżam ze stołem i wszystkim, co potrzebne. Ty nie wychodzisz z domu i nie stoisz w korkach.</p>
+<div class="row"><a class="btn" href="#kontakt">Umów masaż</a><a class="btn o" href="#cennik">Zobacz cennik</a></div>
+</div>
+<div class="img r45" data-brief="Zdjęcie główne: ręce masażysty na plecach klienta, ciepłe, miękkie światło, wnętrze domu"><span>Zdjęcie główne: ręce na plecach, ciepłe światło, wnętrze domu</span></div>
+</div>
+<div class="facts">
+<div><b>Dojazd do klienta</b><span>Przyjeżdżam w <span class="ph">[miasto i okolice]</span>.</span></div>
+<div><b>Własny sprzęt</b><span>Stół, pościel i oleje mam ze sobą.</span></div>
+<div><b>Termin dopasowany</b><span>Także wieczorami i w weekendy. <span class="ph">[Godziny]</span></span></div>
+</div>
+</div></section>
+
+<section id="rodzaje" style="padding-top:0"><div class="w">
+<div class="k">Rodzaje masażu</div>
+<h2>Wybierz to, co Ci <em>potrzebne</em>.</h2>
+<p class="mu" style="max-width:540px">Nie musisz znać technik. Opowiedz, co Cię męczy, a dobiorę odpowiednią. <span class="ph">[Do potwierdzenia z masażystą, które techniki robi]</span></p>
+<div class="tr">
+<div><div class="img r43" data-brief="Masaż relaksacyjny: spokojna scena, olej, dłonie na plecach"><span>Zdjęcie: masaż relaksacyjny, dłonie i olej</span></div><h3>Masaż relaksacyjny</h3><p class="mu">Spokojne, płynne ruchy z ciepłym olejem. Rozluźnia całe ciało i uspokaja głowę.</p><div class="for">Dla zmęczonych i zestresowanych</div></div>
+<div><div class="img r43" data-brief="Masaż gorącymi kamieniami: gładkie czarne kamienie na plecach"><span>Zdjęcie: gorące kamienie ułożone na plecach</span></div><h3>Gorące kamienie</h3><p class="mu">Gładkie, ciepłe kamienie układane na ciele i używane do masażu. Ciepło głęboko rozluźnia mięśnie.</p><div class="for">Dla napiętych pleców i zimnych dni</div></div>
+<div><div class="img r43" data-brief="Masaż leczniczy lub sportowy: praca na karku i barkach"><span>Zdjęcie: masaż karku i barków, mocniejsza technika</span></div><h3>Leczniczy / sportowy</h3><p class="mu">Mocniejsza praca nad konkretnymi napięciami: kark, barki, plecy, nogi po treningu.</p><div class="for">Dla pracy przy biurku i aktywnych</div></div>
+</div>
+</div></section>
+
+<section style="padding:0"><div class="img r219" data-brief="Szeroki kadr: masażysta wnosi stół do mieszkania lub rozstawia go w salonie. To zdjęcie sprzedaje dojazd."><span>Zdjęcie szerokie: masażysta ze stołem w salonie klienta</span></div></section>
+
+<section id="cennik"><div class="w pg">
+<div>
+<div class="k">Czas i cena</div>
+<h2>Ile czasu <em>chcesz</em> dla siebie?</h2>
+<div class="seg" id="seg"></div>
+<div class="pp" id="pp"></div>
+<p id="pd" class="mu" style="max-width:400px"></p>
+<p class="mu" style="font-size:.9rem">Dojazd: <span class="ph">[w cenie / X zł]</span> · Płatność: <span class="ph">[gotówka / BLIK]</span></p>
+<a class="btn" href="#kontakt">Zarezerwuj</a>
+</div>
+<div class="clock"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="88" fill="none" stroke="var(--line)" stroke-width="3"/><circle id="arc" cx="100" cy="100" r="88" fill="none" stroke="var(--acc)" stroke-width="3" transform="rotate(-90 100 100)" stroke-dasharray="552.9" stroke-dashoffset="552.9"/></svg>
+<div class="c"><b id="cm">90</b><span class="mu">minut</span></div></div>
+</div></section>
+
+<section style="border-top:1px solid var(--line)"><div class="w">
+<div class="k">Jak to działa</div>
+<h2>Trzy proste kroki.</h2>
+<div class="sp">
+<div><b>1. Umawiasz termin</b><p class="mu">Dzwonisz, piszesz SMS lub wiadomość. Odpowiadam zwykle w <span class="ph">[kilka godzin]</span>.</p></div>
+<div><b>2. Przyjeżdżam w umówionym czasie</b><p class="mu">Rozstawiam stół w kilka minut. Potrzebuję około 2×2 m wolnego miejsca.</p></div>
+<div><b>3. Po masażu zostajesz w domu</b><p class="mu">Pakuję się i wychodzę. Nie masz drogi powrotnej.</p></div>
+</div></div></section>
+
+<section id="o-mnie" style="border-top:1px solid var(--line)"><div class="w ab">
+<div class="img r45" data-brief="Portret masażysty: naturalne światło, spokojny wzrok, uśmiech"><span>Portret masażysty, naturalne światło</span></div>
+<div>
+<div class="k">Kto przyjedzie</div>
+<h2>Cześć, jestem <em><span class="ph">[Imię]</span></em>.</h2>
+<p class="mu"><span class="ph">[2–3 zdania: skąd pasja, ile lat pracy, dla kogo najczęściej pracuje.]</span></p>
+<div class="cert"><span class="y"><span class="ph">[rok]</span></span><span><span class="ph">[Kurs masażu, organizator]</span></span></div>
+<div class="cert"><span class="y"><span class="ph">[rok]</span></span><span><span class="ph">[Certyfikat]</span></span></div>
+<div class="cert"><span class="y">OC</span><span><span class="ph">[Ubezpieczenie, jeśli jest]</span></span></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="w"><div class="gal">
+<div class="img r11" data-brief="Detal: butelki oleju, ręcznik, świeca"><span>Detal: oleje i ręczniki</span></div>
+<div class="img r11" data-brief="Detal: dłonie, ruch"><span>Detal: dłonie w ruchu</span></div>
+<div class="img r11" data-brief="Detal: kamienie, roślina, spokojna scena"><span>Detal: kamienie i roślina</span></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="w">
+<p class="q">„<span class="ph">[Najlepsza opinia klienta. Konkretna, co się zmieniło po masażu.]</span>”</p>
+<p style="margin-top:18px;font-weight:600">– <span class="ph">[Imię, miasto]</span></p>
+</div></section>
+
+<section style="border-top:1px solid var(--line)"><div class="w two">
+<div><div class="k">Zasięg</div><h2>Gdzie <em>dojeżdżam</em>.</h2><p class="mu"><span class="ph">[Miasta, dzielnice, promień w km, zasady dopłat.]</span> Nie widzisz swojej okolicy? Napisz.</p></div>
+<div>
+<details><summary>Co muszę przygotować?</summary><p>Wolne miejsce na stół i ciepłe pomieszczenie. Resztę mam ze sobą.</p></details>
+<details><summary>Jak odwołać wizytę?</summary><p><span class="ph">[Zasady odwołania]</span></p></details>
+<details><summary>Czy masaż jest dla mnie?</summary><p><span class="ph">[Przeciwwskazania, konsultacja z lekarzem]</span></p></details>
+</div></div></section>
+
+<section id="kontakt" class="cta"><div class="w">
+<h2>Umów swój <em>masaż</em>.</h2>
+<p style="opacity:.75;margin:14px 0 30px">Zadzwoń lub napisz. Wspólnie dobierzemy termin i technikę.</p>
+<div class="row"><a class="btn" href="tel:+48000000000">Zadzwoń: <span class="ph">[numer]</span></a><a class="btn o" href="https://wa.me/48000000000">WhatsApp / SMS</a><a class="btn o" href="mailto:kontakt@example.com">E-mail</a></div>
+</div></section>
+</main>
+<footer>© 2026 <span class="ph">[Imię Nazwisko]</span> · <span class="ph">[NIP / dane firmy]</span></footer>
+<div class="bar"><a class="btn" href="tel:+48000000000">Zadzwoń</a><a class="btn o" href="#kontakt">Umów wizytę</a></div>
+
+<script>
+[].forEach.call(document.querySelectorAll('.img'),function(el){
+ el.title='Kliknij, aby wstawić zdjęcie';
+ el.onclick=function(){var i=document.createElement('input');i.type='file';i.accept='image/*';
+  i.onchange=function(){var f=i.files[0];if(!f)return;el.style.backgroundImage='url('+URL.createObjectURL(f)+')';el.classList.add('has')};i.click()}});
+var P={60:["[XXX zł]","Jedna wybrana partia ciała, np. plecy i kark. Na szybki reset."],90:["[XXX zł]","Cała sesja, najczęściej wybierana. Na porządne rozluźnienie."],120:["[XXX zł]","Bez pośpiechu i z czasem na dokładną pracę."]};
+var seg=document.getElementById('seg');
+function pm(m){[].forEach.call(seg.children,function(b){b.setAttribute('aria-pressed',b.dataset.m==m)});
+ document.getElementById('pp').innerHTML='<span class="ph">'+P[m][0]+'</span>';document.getElementById('pd').textContent=P[m][1];
+ document.getElementById('cm').textContent=m;document.getElementById('arc').style.strokeDashoffset=552.9*(1-m/120)}
+[60,90,120].forEach(function(m){var b=document.createElement('button');b.dataset.m=m;b.textContent=m+' min';b.onclick=function(){pm(m)};seg.appendChild(b)});
+pm(90);
+</script>
+</body>
+</html>
+

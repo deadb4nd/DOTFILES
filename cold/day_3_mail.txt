@@ -1,0 +1,15 @@
+Subject: Two free fixes for slow quotes
+
+Hi {{FirstName}},
+
+Two free things you can use today.
+
+1. The phone rule. Keep a card by the phone with three numbers: price per m² for your top 3 glasses, hours for your 3 most common jobs, and one add-on for hardware. Say: "Around £X. Exact price by email in 10 minutes." Ballpark now, exact later.
+
+2. The callback math. Jobs lost each week to "I'll call you back" × average job value × 52. One job a week at £900 is £46,800 a year.
+
+I still have {{N}} of the 4 free spots. Reply "yes" and I'll build your quote tool.
+
+Dawid
+
+Reply "no" and I'll stop.

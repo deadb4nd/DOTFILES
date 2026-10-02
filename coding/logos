@@ -1,0 +1,44 @@
+The theory you actually need
+
+Logo replication is 90% about rebuilding with the right construction method, not freehand drawing. Four concepts to learn deliberately:
+
+Boolean operations (Union, Subtract, Intersect, Exclude) — how negative-space logos (FedEx arrow, WWF panda) are actually built from overlapping shapes, not drawn by hand.
+The arc/ellipse tool + stroke properties — for anything like Spotify's bars: draw a full circle, apply a stroke, then use the arc/angle property to cut it down to a segment. This is how you get mathematically perfect, evenly-spaced arcs instead of hand-drawn curves.
+Grids & optical vs. mathematical alignment — most corporate logos were built on strict geometric grids (circles, squares dividing into halves/thirds). Recreating the "logo grid" breakdown (search "[brand] logo construction grid") before building teaches you why proportions feel right.
+Pen tool + bezier handles — for swoosh/flowing logos (Nike, Amazon arrow). This is the actual hard skill — learn to place minimum anchor points with symmetric handles rather than many messy points.
+
+Practice ladder (easy → hard)
+
+Tier 1 — shapes & booleans
+
+Target (concentric circles) *
+Mastercard (circle overlap/blend) *
+Adidas (3 parallelogram bars — angle math) *
+Pepsi (circle divided, easy boolean practice) *
+
+Tier 2 — arcs & strokes (like Spotify)
+
+Wi-Fi symbol *
+Airbnb "Bélo"
+McDonald's arches (two overlapping arcs)
+Chrome logo (circles + arc segments)
+
+Tier 3 — negative space (boolean mastery)
+
+FedEx (the hidden arrow between E and x — great pen/kerning exercise)
+WWF panda
+Amazon (arrow underline with the smile-to-a-to-z trick)
+Unilever U
+
+Tier 4 — pen tool / bezier control
+
+Nike swoosh
+Twitter's old bird
+Batman logo
+NBC peacock (multiple color shapes + curve control)
+
+Tier 5 — geometry + optics combined
+
+Apple logo (circles + bite subtraction)
+Google "G" (arc + boolean + color segments)
+Pinterest "P" (circle boolean)

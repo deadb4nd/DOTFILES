@@ -1,0 +1,55 @@
+SUBJECT >>>>>>>
+A) Curiosity
+
+our quotes are bleeding money
+the $4k tool, free
+stop guessing your margin
+quick one
+
+B) Direct pain
+
+forgot to charge for holes?
+quotes taking too long?
+money left on your quotes
+
+<<<<<<
+
+
+
+
+>>>>>>
+Openers
+
+A) Shock
+
+Most glass quotes miss 4 lines. Each one costs you money.
+
+B) Humor
+
+I worked in a glass shop for a month. I learned two things. Glass is heavy. Quotes are chaos.
+
+C) Hyper-personal
+
+Saw {{shop_name}} does {{shower doors / storefronts}} in {{city}}. Those jobs are easy to under-quote.
+
+<<<<<<
+
+
+Dawid
+Reply "no" and I'll stop.
+
+////
+I made something for glass shops and you can have it now, free. No signup.
+
+It's a quote sheet. You type in your own glass costs, edge and hole prices, labour rate and target margin once. After that, each quote takes a minute: enter the pieces, and it shows your cost, the price to quote, and what you keep. It prints a clean customer quote as a PDF with your shop name on it. Your prices stay in your browser and go nowhere.
+
+Here it is: https://free-quoting-tool.netlify.app/
+
+One thing to check while you're in there. A 45% markup is only a 31% margin. To keep a 40% margin you need about a 67% markup. There's a table for it in the tool.
+
+I'm also picking 4 shops to get a full custom version, built around your exact glass, hardware and process. Free, and you owe me nothing if it doesn't work. It normally costs $4,000. Want a spot? Reply "yes".
+
+Dawid
+
+Don't want emails from me? Reply "no" and I'll stop.
+///

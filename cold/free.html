@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glass &amp; Mirror Quote Sheet  free tool by SquareFoot</title>
+<style>
+:root{--ink:#071216;--acc:#0e6b52;--wash:#e3f2ec;--paper:#f6f5f0;--card:#fffefb;--rule:#d7d5ca;--mut:#5d6f75;--bad:#ab3f2a;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{background:var(--ink);color:#e7f1ee;padding:14px 20px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between}
+header b{font-size:17px;letter-spacing:.01em}header small{color:#8ba49f}
+nav{display:flex;gap:4px;padding:10px 20px 0;max-width:1100px;margin:auto;flex-wrap:wrap}
+nav button{border:1px solid var(--rule);border-bottom:0;background:#ecebe3;padding:9px 16px;border-radius:6px 6px 0 0;font:600 14px inherit;cursor:pointer;color:var(--mut)}
+nav button.on{background:var(--card);color:var(--ink)}
+main{max-width:1100px;margin:auto;padding:0 20px 60px}
+section{display:none;background:var(--card);border:1px solid var(--rule);padding:22px;border-radius:0 8px 8px 8px}section.on{display:block}
+h2{margin:0 0 4px;font-size:20px}p.s{margin:0 0 18px;color:var(--mut);font-size:14px}
+h3{font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin:22px 0 8px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+label{display:block;font-size:12px;color:var(--mut);font-weight:600}
+input,select,textarea{width:100%;margin-top:3px;padding:9px 10px;border:1px solid var(--rule);border-radius:6px;font:15px inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);outline-offset:-1px}
+.row{display:grid;gap:8px;grid-template-columns:2fr 1fr auto;margin-bottom:8px;align-items:end}.row.r4{grid-template-columns:2fr 1fr 1.3fr auto}.row.r3{grid-template-columns:2fr 1fr 1fr auto}
+.prow{display:grid;gap:8px;grid-template-columns:2fr repeat(3,1fr);margin-bottom:4px;padding:12px;background:var(--paper);border-radius:8px}
+.prow .w2{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:end}.prow .w2>*{flex:1 1 90px}
+.chk{display:flex;align-items:center;gap:8px;flex:0 0 auto!important;margin-bottom:10px}.chk input{width:auto;margin:0}
+button.b{background:var(--acc);color:#fff;border:0;border-radius:6px;padding:10px 16px;font:600 14px inherit;cursor:pointer}
+button.b.o{background:none;color:var(--acc);border:1px solid var(--acc)}button.x{background:none;border:0;color:var(--bad);font-size:18px;cursor:pointer;padding:6px}
+.out{margin-top:22px;background:var(--ink);color:#e7f1ee;border-radius:8px;padding:20px}
+.out table{width:100%;border-collapse:collapse;font-size:14px}.out td{padding:5px 0;border-bottom:1px solid #1b3a42}.out td:last-child{text-align:right;font-family:var(--mono)}
+.big{font:600 32px var(--mono);color:#63e3bd;margin:10px 0 2px}.note{font-size:12.5px;color:#8ba49f}
+.banner{background:var(--wash);border:1px solid #b9dccf;padding:12px 14px;border-radius:8px;margin-bottom:18px;font-size:14px}
+table.m{border-collapse:collapse;font-family:var(--mono);font-size:14px}table.m td,table.m th{padding:6px 18px 6px 0;text-align:left;border-bottom:1px solid var(--rule)}
+footer{max-width:1100px;margin:auto;padding:0 20px 40px;color:var(--mut);font-size:13px}footer a{color:var(--acc)}
+#print{display:none}
+@media(max-width:640px){.prow{grid-template-columns:1fr 1fr}.prow>:first-child{grid-column:1/-1}}
+@media print{body>*:not(#print){display:none!important}#print{display:block;padding:24px;font:14px/1.5 Georgia,serif;color:#000;background:#fff}#print table{width:100%;border-collapse:collapse}#print td,#print th{padding:6px 4px;border-bottom:1px solid #999;text-align:left}#print td.r,#print th.r{text-align:right}}
+#wz{position:fixed;inset:0;background:rgba(7,18,22,.72);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}#wz.on{display:flex}
+#wz .c{background:var(--card);border-radius:12px;max-width:580px;width:100%;max-height:92vh;overflow:auto;padding:26px 26px 20px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+#wz h2{font-size:22px;margin:0 0 6px}#wz p{margin:0 0 14px;color:var(--mut)}#wz ol{padding-left:20px;margin:0 0 14px}#wz li{margin-bottom:6px}
+#wz .dots{display:flex;gap:6px;margin-bottom:18px}#wz .dots i{flex:1;height:4px;border-radius:4px;background:var(--rule)}#wz .dots i.on{background:var(--acc)}
+#wz .ft{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px}#wz .sk{background:none;border:0;color:var(--mut);font:14px inherit;cursor:pointer;text-decoration:underline}
+#wz .hint{background:var(--wash);border-radius:8px;padding:10px 12px;font-size:13.5px;color:#26463c;margin-bottom:14px}
+#wz .row{grid-template-columns:2fr 1fr auto}#wz .bs{font-size:12px;color:var(--mut);align-self:center;padding-top:16px}
+</style></head><body>
+<header><b>Glass &amp; Mirror Quote Sheet</b><button class="b o" style="border-color:#63e3bd;color:#63e3bd" onclick="wzOpen()">Setup guide</button><small>Free tool for glass shops · your prices stay in your browser · nothing is sent anywhere</small></header>
+<nav id="tabs"></nav>
+<main>
+<section id="t0"><h2>1. Your rate card</h2><p class="s">Enter your own costs once. They save automatically in this browser. Use Export to back them up or move to another computer.</p>
+<div class="banner" id="ban">Start here: fill in your <b>cost per area</b> for the glass, mirrors and other products you sell, plus your <b>labour rate</b>. Blank costs count as zero. Add or rename anything.</div>
+<div id="rc"></div>
+<h3>Backup</h3><button class="b o" onclick="exp()">Export rate card</button> <button class="b o" onclick="document.getElementById('imp').click()">Import rate card</button><input type="file" id="imp" accept=".json" hidden onchange="imp(this)"></section>
+<section id="t1"><h2>2. Build a quote</h2><p class="s">Add every piece in the job: glass, mirrors, splashbacks, balustrade, anything sold by size. The price updates as you type.</p><div id="qf"></div><div class="out" id="out"></div>
+<p style="margin-top:14px"><button class="b" onclick="prt()">Print / save customer quote as PDF</button> <button class="b o" onclick="newQ()">New quote</button></p></section>
+<section id="t2"><h2>3. Markup vs margin</h2><p class="s">Margin is the share of the <i>price</i> you keep. Markup is the amount added to <i>cost</i>. They are not the same number, and mixing them up is a quiet way to lose money.</p>
+<div class="g" style="max-width:520px"><label>Your markup on cost (%)<input id="mk" type="number" value="45" oninput="mm()"></label><label>Margin you actually keep<input id="mo" readonly></label></div>
+<h3>Markup needed for each margin</h3><table class="m" id="mt"></table></section>
+</main>
+<footer>Free tool by <b>SquareFoot</b> - custom quoting tools for glass shops. Want this built around your exact glass, hardware and process? <a id="ct" href="#">Get in touch</a>.</footer>
+<div id="wz"><div class="c" id="wzc"></div></div>
+<div id="print"></div>
+<script>
+const KEY='sf-free-quote-v2',CONTACT='hello@squarefoot.build'; /* TODO(owner): your real email */
+const dS=()=>({shop:'Your Glass Shop',cur:'£',unit:'m',tax:0,margin:40,minC:0,waste:10,rate:0,fab:0.5,
+prod:['4mm silvered mirror','6mm silvered mirror','6mm clear float','6mm clear toughened','10mm clear toughened','10mm low-iron toughened','6.4mm laminated','6mm back-painted glass (splashback)','12mm toughened (balustrade)'].map(n=>({n,p:0})),
+proc:[['Polished edge','len'],['Bevelled edge','len'],['Toughening','area'],['Back-painting / colour','area'],['Safety backing film','area'],['Sandblast / etched design','area'],['Hole','each'],['Notch / cut-out','each'],['Demister pad / LED','each']].map(([n,b])=>({n,b,p:0})),
+hw:['Hinge','Handle','Clamp / bracket / fixing'].map(n=>({n,p:0})),terms:'Valid for 30 days. Deposit due to order. Made-to-measure glass cannot be returned.'});
+const dP=()=>({d:'Mirror',w:900,h:1200,q:1,g:0,x:{}});
+const dQ=()=>({cust:'',ref:'',pieces:[dP()],hw:[],ex:[],inst:0,del:0});
+let S,Q;const $=id=>document.getElementById(id),num=v=>parseFloat(v)||0;
+try{const r=JSON.parse(localStorage.getItem(KEY)||'null');S=Object.assign(dS(),r&&r.S);Q=Object.assign(dQ(),r&&r.Q)}catch(e){S=dS();Q=dQ()}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({S,Q}))}catch(e){}};
+const im=()=>S.unit!='m',AU=()=>im()?'ft²':'m²',LU=()=>im()?'ft':'m',DU=()=>im()?'in':'mm';
+const A=(w,h)=>im()?w*h/144:w*h/1e6,L=(w,h)=>im()?2*(w+h)/12:2*(w+h)/1000,M=v=>S.cur+(v||0).toFixed(2);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function calc(){let gl=0,pr=0,lab=0,ar=0;
+Q.pieces.forEach(p=>{const g=S.prod[p.g]||{p:0},a=A(p.w,p.h),n=p.q;ar+=a*n;gl+=a*n*g.p*(1+S.waste/100);
+S.proc.forEach((r,j)=>{const v=(p.x||{})[j]||0;pr+=n*v*r.p*(r.b=='len'?L(p.w,p.h):r.b=='area'?a:1)});lab+=n*S.fab*S.rate});
+const hw=Q.hw.reduce((t,r)=>t+r.q*((S.hw[r.i]||{}).p||0),0),ex=Q.ex.reduce((t,r)=>t+r.q*r.c,0);lab+=Q.inst*S.rate;
+const cost=gl+pr+lab+hw+ex+Q.del,m=Math.min(Math.max(S.margin,0),95)/100;let price=cost/(1-m),min=false;
+if(price<S.minC){price=S.minC;min=true}
+const tax=price*S.tax/100;return{gl,pr,lab,hw,ex,cost,price,min,tax,tot:price+tax,ar,profit:price-cost,mk:cost?(price-cost)/cost*100:0}}
+function out(){const c=calc();$('out').innerHTML=`${c.cost?'':'<div class="note" style="color:#f0c674;margin-bottom:12px">Your costs are blank, so the price shows zero. <a href="#" style="color:#63e3bd" onclick="wzOpen();return false">Open the setup guide</a></div>'}<table><tr><td>Materials (${c.ar.toFixed(2)} ${AU()}, incl. ${S.waste}% waste)</td><td>${M(c.gl)}</td></tr><tr><td>Processing and finishing</td><td>${M(c.pr)}</td></tr><tr><td>Hardware</td><td>${M(c.hw)}</td></tr><tr><td>Other lines</td><td>${M(c.ex)}</td></tr><tr><td>Labour and install</td><td>${M(c.lab)}</td></tr><tr><td>Delivery</td><td>${M(Q.del)}</td></tr><tr><td><b>Your total cost</b></td><td><b>${M(c.cost)}</b></td></tr></table>
+<div class="note" style="margin-top:14px">Price to quote at ${S.margin}% margin${c.min?' (minimum charge applied)':''}${S.tax?', before '+S.tax+'% tax':''}</div><div class="big">${M(c.price)}</div><div class="note">You keep ${M(c.profit)} · that is a ${c.mk.toFixed(0)}% markup on cost${S.tax?' · total with tax '+M(c.tot):''}</div>`;save()}
+const inp=(l,v,f,t='number',x='')=>`<label>${l}<input type="${t}" value="${esc(v)}" ${x} oninput="${f}"></label>`;
+const BS=()=>[['len','per '+LU()+' of edge'],['area','per '+AU()],['each','each']];
+function rc(){const list=(k,lab,b)=>S[k].map((r,i)=>`<div class="row${b?' r4':''}"><label>${lab}<input value="${esc(r.n)}" oninput="S.${k}[${i}].n=this.value;sv()" onchange="qf()"></label><label>Your cost (${S.cur})<input type="number" value="${r.p}" oninput="S.${k}[${i}].p=num(this.value);sv()"></label>${b?`<label>Charged<select onchange="S.${k}[${i}].b=this.value;sv();rc();qf()">${BS().map(([v,t])=>`<option value="${v}"${v==r.b?' selected':''}>${t}</option>`).join('')}</select></label>`:''}<button class="x" title="Remove" onclick="rm('${k}',${i})">×</button></div>`).join('');
+$('rc').innerHTML=`<h3>Basics</h3><div class="g"><label>Shop name (on customer quote)<input value="${esc(S.shop)}" oninput="S.shop=this.value;sv()"></label>
+<label>Currency<select onchange="S.cur=this.value;sv();rc()">${['£','$','€'].map(c=>`<option${c==S.cur?' selected':''}>${c}</option>`).join('')}</select></label>
+<label>Units<select onchange="S.unit=this.value;sv();rc();qf()"><option value="m"${im()?'':' selected'}>Metric (mm, m²)</option><option value="i"${im()?' selected':''}>Imperial (in, ft²)</option></select></label>
+${inp('Target margin (%)',S.margin,"S.margin=num(this.value);sv()")}${inp('Tax / VAT (%)',S.tax,"S.tax=num(this.value);sv()")}${inp('Minimum charge ('+S.cur+')',S.minC,"S.minC=num(this.value);sv()")}</div>
+<h3>Products - your cost per ${AU()}</h3><p class="s">Glass, mirrors, splashbacks, balustrade, table tops. Anything you sell by size.</p>${list('prod','Product')}<button class="b o" onclick="add('prod')">+ Add product</button>
+<h3>Processing and finishing</h3><p class="s">You decide how each is charged: per ${LU()} of edge, per ${AU()}, or each.</p>${list('proc','Item',1)}<button class="b o" onclick="add('proc')">+ Add processing item</button>
+<h3>Labour and waste</h3><div class="g">${inp('Waste allowance on material (%)',S.waste,"S.waste=num(this.value);sv()")}${inp('Labour cost per hour',S.rate,"S.rate=num(this.value);sv()")}${inp('Fabrication hours per piece',S.fab,"S.fab=num(this.value);sv()")}</div>
+<h3>Hardware and fittings - your cost each</h3>${list('hw','Item')}<button class="b o" onclick="add('hw')">+ Add hardware</button>
+<h3>Customer quote terms</h3><label>Printed at the bottom of every quote<textarea rows="2" oninput="S.terms=this.value;sv()">${esc(S.terms)}</textarea></label>`}
+function qf(){const opt=(p,i)=>S.proc.map((r,j)=>r.b=='each'?`<label style="flex:0 0 100px">${esc(r.n)}<input type="number" value="${(p.x||{})[j]||0}" oninput="Q.pieces[${i}].x[${j}]=num(this.value);out()"></label>`:`<label class="chk"><input type="checkbox"${(p.x||{})[j]?' checked':''} onchange="Q.pieces[${i}].x[${j}]=this.checked?1:0;out()">${esc(r.n)}</label>`).join('');
+$('qf').innerHTML=`<div class="g">${inp('Customer',Q.cust,"Q.cust=this.value;out()",'text')}${inp('Job reference',Q.ref,"Q.ref=this.value;out()",'text')}</div><h3>Pieces</h3>`+
+Q.pieces.map((p,i)=>`<div class="prow">${inp('Description',p.d,`Q.pieces[${i}].d=this.value;out()`,'text')}${inp('Width ('+DU()+')',p.w,`Q.pieces[${i}].w=num(this.value);out()`)}${inp('Height ('+DU()+')',p.h,`Q.pieces[${i}].h=num(this.value);out()`)}${inp('Qty',p.q,`Q.pieces[${i}].q=num(this.value);out()`)}
+<div class="w2"><label style="flex:2 1 220px">Product<select onchange="Q.pieces[${i}].g=+this.value;out()">${S.prod.map((g,k)=>`<option value="${k}"${k==p.g?' selected':''}>${esc(g.n)}</option>`).join('')}</select></label><button class="x" title="Remove piece" onclick="Q.pieces.splice(${i},1);qf();out()">×</button></div><div class="w2">${opt(p,i)}</div></div>`).join('')+
+`<button class="b o" onclick="Q.pieces.push(dP());qf();out()">+ Add piece</button><h3>Hardware</h3>`+
+Q.hw.map((r,i)=>`<div class="row"><label>Item<select onchange="Q.hw[${i}].i=+this.value;out()">${S.hw.map((h,j)=>`<option value="${j}"${j==r.i?' selected':''}>${esc(h.n)}</option>`).join('')}</select></label>${inp('Qty',r.q,`Q.hw[${i}].q=num(this.value);out()`)}<button class="x" onclick="Q.hw.splice(${i},1);qf();out()">×</button></div>`).join('')+
+`<button class="b o" onclick="Q.hw.push({i:0,q:1});qf();out()">+ Add hardware</button><h3>Other lines</h3><p class="s">Anything else: re-silvering, special-order items, subcontract work. Enter your cost.</p>`+
+Q.ex.map((r,i)=>`<div class="row r3">${inp('Description',r.d,`Q.ex[${i}].d=this.value;out()`,'text')}${inp('Your cost each ('+S.cur+')',r.c,`Q.ex[${i}].c=num(this.value);out()`)}${inp('Qty',r.q,`Q.ex[${i}].q=num(this.value);out()`)}<button class="x" onclick="Q.ex.splice(${i},1);qf();out()">×</button></div>`).join('')+
+`<button class="b o" onclick="Q.ex.push({d:'',c:0,q:1});qf();out()">+ Add line</button><h3>Install and delivery</h3><div class="g">${inp('Install hours',Q.inst,"Q.inst=num(this.value);out()")}${inp('Delivery cost ('+S.cur+')',Q.del,"Q.del=num(this.value);out()")}</div>`}
+const sv=()=>{save();out();const b=$('ban');if(S.rate||S.prod.some(g=>g.p))b.style.display='none'};
+function add(k){S[k].push(k=='proc'?{n:'',p:0,b:'each'}:{n:'',p:0});sv();rc();qf()}
+function rm(k,i){S[k].splice(i,1);
+if(k=='prod')Q.pieces.forEach(p=>{if(p.g>=S.prod.length)p.g=0});
+if(k=='proc')Q.pieces.forEach(p=>{const n={};Object.keys(p.x||{}).forEach(a=>{a=+a;if(a<i)n[a]=p.x[a];else if(a>i)n[a-1]=p.x[a]});p.x=n});
+if(k=='hw')Q.hw=Q.hw.filter(r=>r.i!=i).map(r=>({i:r.i>i?r.i-1:r.i,q:r.q}));
+sv();rc();qf()}
+function newQ(){Q=dQ();qf();out()}
+function prt(){const c=calc(),d=new Date().toLocaleDateString();
+$('print').innerHTML=`<h1 style="margin:0">${esc(S.shop)}</h1><p>Quotation${Q.ref?' · Ref '+esc(Q.ref):''} · ${d}${Q.cust?'<br>For: '+esc(Q.cust):''}</p><table><tr><th>Item</th><th>Size</th><th class="r">Qty</th></tr>${Q.pieces.map(p=>`<tr><td>${esc(p.d)} - ${esc((S.prod[p.g]||{}).n||'')}${S.proc.map((r,j)=>(p.x||{})[j]?', '+esc(r.n.toLowerCase())+(r.b=='each'?' ×'+p.x[j]:''):'').join('')}</td><td>${p.w} × ${p.h} ${DU()}</td><td class="r">${p.q}</td></tr>`).join('')}${Q.hw.map(r=>`<tr><td>${esc((S.hw[r.i]||{}).n||'')}</td><td></td><td class="r">${r.q}</td></tr>`).join('')}${Q.ex.filter(r=>r.d).map(r=>`<tr><td>${esc(r.d)}</td><td></td><td class="r">${r.q}</td></tr>`).join('')}</table>
+<p style="text-align:right;margin-top:18px">${S.tax?'Subtotal '+M(c.price)+'<br>Tax ('+S.tax+'%) '+M(c.tax)+'<br>':''}<b style="font-size:20px">Total ${M(c.tot)}</b></p><p style="font-size:12px;margin-top:30px">${esc(S.terms)}</p>`;window.print()}
+function exp(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,1)],{type:'application/json'}));a.download='rate-card.json';a.click()}
+function imp(el){const f=el.files[0];if(!f)return;f.text().then(t=>{try{S=Object.assign(dS(),JSON.parse(t));save();rc();qf();out()}catch(e){alert('That file is not a rate card.')}})}
+function mm(){const m=num($('mk').value);$('mo').value=(m/(100+m)*100).toFixed(1)+'%'}
+$('mt').innerHTML='<tr><th>Margin</th><th>Markup</th></tr>'+[20,25,30,35,40,45,50].map(m=>`<tr><td>${m}%</td><td>${(m/(100-m)*100).toFixed(1)}%</td></tr>`).join('');mm();
+const T=['1. Rate card','2. Build a quote','3. Markup vs margin'];
+T.forEach((t,i)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>go(i);b.id='b'+i;$('tabs').appendChild(b)});
+function go(i){T.forEach((_,j)=>{$('t'+j).classList.toggle('on',i==j);$('b'+j).classList.toggle('on',i==j)})}
+$('ct').href='mailto:'+CONTACT+'?subject='+encodeURIComponent('Custom quoting tool');
+rc();qf();out();go(0);sv();
+
+/* ---------- first-run setup guide ---------- */
+let wi=0;const WN=6,OB='sf-free-onb';
+const rowsP=(k)=>S[k].map((r,i)=>`<div class="row"><label>${k=='prod'?'Product':'Item'}<input value="${esc(r.n)}" oninput="S.${k}[${i}].n=this.value;sv()"></label><label>Your cost (${S.cur})<input type="number" placeholder="0" value="${r.p||''}" oninput="S.${k}[${i}].p=num(this.value);sv()"></label>${k=='proc'?`<span class="bs">${{len:'per '+LU()+' of edge',area:'per '+AU(),each:'each'}[r.b]}</span>`:'<span></span>'}</div>`).join('');
+const WS=[
+()=>`<h2>Welcome to your quote sheet</h2><p>Price any glass or mirror job in about a minute, then print a clean quote for your customer.</p><ol><li><b>Set up your prices</b> - about 3 minutes, once</li><li><b>Add the pieces</b> for a job</li><li><b>Print the quote</b> and send it</li></ol><div class="hint">Everything you type stays on this computer. Nothing is sent anywhere. You can change any number later.</div>`,
+()=>`<h2>Your shop</h2><p>These appear on your customer quotes.</p><div class="g" style="grid-template-columns:1fr 1fr">${inp('Shop name',S.shop,"S.shop=this.value;sv()",'text')}<label>Currency<select onchange="S.cur=this.value;sv();wzR()">${['£','$','€'].map(c=>`<option${c==S.cur?' selected':''}>${c}</option>`).join('')}</select></label><label>Measurements<select onchange="S.unit=this.value;sv();wzR()"><option value="m"${im()?'':' selected'}>Metric (mm)</option><option value="i"${im()?' selected':''}>Imperial (inches)</option></select></label>${inp('Tax / VAT % (0 if none)',S.tax,"S.tax=num(this.value);sv()")}</div><div style="margin-top:12px">${inp('How much do you want to keep? (%)',S.margin,"S.margin=num(this.value);sv()")}</div><div class="hint">Out of every ${S.cur}100 you charge, how much should be left after your costs? 40 means ${S.cur}40 stays with you.</div>`,
+()=>`<h2>What does your glass cost you?</h2><p>Enter what <b>you pay</b> per ${AU()}, not what you charge. Your latest supplier invoice is the easiest place to look. Leave blank anything you don't sell.</p>${rowsP('prod')}<button class="b o" onclick="add('prod');wzR()">+ Add a product</button>`,
+()=>`<h2>Finishing and processing</h2><p>What each of these costs you. Leave blank anything you don't do.</p>${rowsP('proc')}<button class="b o" onclick="add('proc');S.proc[S.proc.length-1].b='each';wzR()">+ Add an item</button>`,
+()=>`<h2>Labour and waste</h2><div class="g" style="grid-template-columns:1fr 1fr">${inp('Cost of one hour of labour ('+S.cur+')',S.rate||'',"S.rate=num(this.value);sv()",'number','placeholder="0"')}${inp('Hours to make one piece',S.fab,"S.fab=num(this.value);sv()")}</div><div class="hint">Labour: what an hour of a worker's time costs you, including wages. Hours per piece: cutting, cleaning, packing. You enter install hours on each job.</div>${inp('Waste allowance (%)',S.waste,"S.waste=num(this.value);sv()")}<div class="hint">Glass gets offcut and sometimes broken. 10 means you add 10% to the material cost to cover that.</div>`,
+()=>`<h2>You're ready</h2><p>Your prices are saved. Next, build your first quote: we've added an example piece so you can change the size and watch the price move.</p><ol><li>Pick the product and choose its finishing</li><li>Add hardware, install hours and delivery if the job has them</li><li>Press <b>Print / save customer quote as PDF</b></li></ol><div class="hint">Tip: use Export on the Rate card tab to back up your prices, or to use them on another computer. The Setup guide button at the top brings this back any time.</div>`];
+function wzR(){$('wzc').innerHTML=`<div class="dots">${WS.map((_,i)=>`<i class="${i<=wi?'on':''}"></i>`).join('')}</div>`+WS[wi]()+`<div class="ft"><span>${wi?'<button class="sk" onclick="wzG(-1)">← Back</button>':'<button class="sk" onclick="wzX()">Skip for now</button>'}</span><button class="b" onclick="wzG(1)">${wi==0?'Start setup':wi==WN-1?'Build my first quote':'Next'}</button></div>`}
+function wzG(d){if(wi+d>=WN){wzX(1);return}wi=Math.max(0,wi+d);wzR();$('wzc').scrollTop=0}
+function wzOpen(){wi=0;$('wz').classList.add('on');wzR()}
+function wzX(done){$('wz').classList.remove('on');try{localStorage.setItem(OB,'1')}catch(e){}rc();qf();out();if(done)go(1)}
+try{if(!localStorage.getItem(OB))wzOpen()}catch(e){wzOpen()}
+</script></body></html>
